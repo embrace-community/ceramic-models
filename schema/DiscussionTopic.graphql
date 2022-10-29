@@ -1,0 +1,17 @@
+type DiscussionTopic
+  @createModel(
+    accountRelation: LIST
+    description: "Discussion topic within a space"
+  ) {
+  spaceId: Int!
+  author: DID!
+  address: String! @string(maxLength: 64)
+  title: String! @string(maxLength: 100)
+  content: String! @string(maxLength: 500) # Max length of 500 characters for now
+  litencryption: LitEncryption
+}
+
+type LitEncryption {
+  accessConditions: String! @string(maxLength: 500) # JSON stringify until supported by the schema
+  encryptedSymmetricKey: String! @string(maxLength: 500)
+}
