@@ -1,6 +1,6 @@
 type DiscussionTopic
   @loadModel(
-    id: "kjzl6hvfrbw6c9hi4rmt6awuolpdknb91gq0t42rlnl8ru5gzqoebe60tcifv3o"
+    id: "kjzl6hvfrbw6c76kvqxy53q10bxymmyfzrjy2v4vb153eg8yz0r9vyyu6gfnvwg"
   ) {
   id: ID!
 }
@@ -11,7 +11,7 @@ type DiscussionTopicComment
   discussionTopic: DiscussionTopic!
     @relationDocument(property: "discussionTopicId")
   spaceId: Int!
-  author: DID!
+  author: DID
   address: String! @string(maxLength: 64)
   content: String! @string(maxLength: 500) # Max length of 500 characters for now
   litencryption: LitEncryption

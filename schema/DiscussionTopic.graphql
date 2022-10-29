@@ -4,7 +4,7 @@ type DiscussionTopic
     description: "Discussion topic within a space"
   ) {
   spaceId: Int!
-  author: DID!
+  author: DID
   address: String! @string(maxLength: 64)
   title: String! @string(maxLength: 100)
   content: String! @string(maxLength: 500) # Max length of 500 characters for now
