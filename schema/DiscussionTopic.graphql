@@ -8,6 +8,7 @@ type DiscussionTopic
   address: String! @string(maxLength: 64)
   title: String! @string(maxLength: 100)
   content: String! @string(maxLength: 500) # Max length of 500 characters for now
+  createdAt: String! @string(maxLength: 25)
   litencryption: LitEncryption
 }
 
